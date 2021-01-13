@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <style>
+            table, th, td, input {
+              border: 0px solid black;
+            }
+            
+            th, td {
+              padding: 4px;
+            }
+            </style>
+            
+        <script src="primeCalc.js"></script>
+        <script src="myScript.js"></script>
+        <form>
+            <table  style="background-color:#00FF00;">
+                <tr><td></td><td></td><td>prime factors</td><td>simplified</td></tr>
+                <tr><td>top</td><td><input type="text" id="top" value="18"></input></td><td><input type="text" id="topSimp" ></td><td><input type="text" id="topSimplified" ></td></tr>
+                <tr><td></td><td>---------</td><td>----------</td></tr>
+                <tr><td>bottom</td><td><input type="text" id="bottom" value="48"></input></td><td><input type="text" id="bottomSimp"></td><td><input type="text" id="bottomSimplified"></td></tr>
+            </table>
+            <button type="button" onclick="simplifyFraction()">Simplify da fraction into prime factors</button>
+        </form>
+    </body>
+</html>

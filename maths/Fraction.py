@@ -3,8 +3,6 @@ class Fraction:
         self.top = top
         self.bottom = bottom
 
-
-
     def describeMe(self):
         print ('                   ',self.top)
         print ('I am the fraction ------')
@@ -12,13 +10,19 @@ class Fraction:
         print('')
 
     def times(self, other):
-        return Fraction(self.top * other.top, self.bottom * other.bottom)
+        result = Fraction(self.top * other.top, self.bottom * other.bottom)
+        print('multiplying two fractions together')
+        showWorkings(self, "X", other, result)
+        return result
 
     def add(self, other):
-        return Fraction(self.top * other.bottom + self.bottom * other.top, self.bottom * other.bottom)
+        print('adding two fractions')
+        result =  Fraction(self.top * other.bottom + self.bottom * other.top, self.bottom * other.bottom)
+        showWorkings(self, "+", other, result)
+        return result
 
 
-def formatEqualtion(left, sign, right, result):
+def showWorkings(left, sign, right, result):
     print(' ',left.top, '    ', right.top, '     ', result.top )
     print(' ---',sign,'----',' = ', '----')
     print(' ', left.bottom, '    ', right.bottom, '     ', result.bottom)
